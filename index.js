@@ -14,9 +14,9 @@ function reduce(src, callback, startingValue) {
   let total;
   if (startingValue) {
     total = startingValue;
-    // for (let i = 0; i < src.length; i++) {
-    //   total = callback(src[i], total);
-    // }
+    for (let i = 0; i < src.length; i++) {
+      total = callback(src[i], total);
+    }
     return total;
   } else {
     total = src[0];
